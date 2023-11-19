@@ -51,32 +51,59 @@ const moreInfoOperation = items =>{
     const leftInfo = document.getElementById('left-Info')
     const rightInfo = document.getElementById('right-info')
     leftInfo.innerHTML = `
-         <div class="border p-2 border-danger">
-         <p>${items.data.description}</P>
-          <div class="d-flex justify-content-around">
-          <div class=" bg-light-subtle p-2 rounded text-success">
+         <div class="border p-2 border-danger bg-danger-subtle rounded">
+         <p class="fs-6">${items.data.description}</P>
+          <div class="d-flex justify-content-around  ">
+          <div class=" bg-light-subtle p-2  rounded text-success">
             <span>${items.data.pricing[0].price}<br></span>
             <span>${items.data.pricing[0].plan}<br></span>
           </div>          
-          <div class="bg-light-subtle p-2 text-warning">
+          <div class="bg-light-subtle p-3  text-warning">
           <span>${items.data.pricing[1].price}<br></span>
           <span>${items.data.pricing[1].plan}<br></span>
           </div>
-          <div class="bg-light-subtle p-2 text-danger">
+          <div class="bg-light-subtle p-2  text-danger">
           <span>${items.data.pricing[2].price}<br></span>
           <span>${items.data.pricing[2].plan}<br></span></div>
           </div>
-          <h5>Features</h5>
+         
+          <div class="d-flex justify-content-around">
           <div>
+          <h5>Features</h5>
           <ul>
           <li>${items.data.features[1].feature_name}</li>
           <li>${items.data.features[2].feature_name}</li>
           <li>${items.data.features[3].feature_name}</li>
           </ul>
           </div>
-      
+          <div>
+          <h5>Integrations</h5>
+          <ul>
+          <li>${items.data.integrations[0]}</li>
+          <li>${items.data.integrations[1]}</li>
+          <li>${items.data.integrations[2]}</li>
+          </ul>
+          </div>
+          </div>
          </div>
-       
+          `
+
+    rightInfo.innerHTML =
+    
+    `
+    <div class="border p-2 border rounded">
+    <img src ="${items.data.image_link[0]}"class="img-fluid"> 
+    <span class="bg-danger px-2 text-white">Accuracy:${items.data.accuracy.score ? items.data.accuracy.score:'No Accuracy'}</span>
+    <h5 class="text-center fs-6">${items.data.input_output_examples[0].input}</h5>
+    <h6 class="text-center">${items.data.input_output_examples[0].output}</h6>
+
+    </diV>
+
+    
+    
+    
+    
+    
     `
 
 

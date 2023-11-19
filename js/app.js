@@ -66,11 +66,17 @@ const moreInfoOperation = items =>{
           <span>${items.data.pricing[2].price}<br></span>
           <span>${items.data.pricing[2].plan}<br></span></div>
           </div>
-           
-
-
+          <h5>Features</h5>
+          <div>
+          <ul>
+          <li>${items.data.features[1].feature_name}</li>
+          <li>${items.data.features[2].feature_name}</li>
+          <li>${items.data.features[3].feature_name}</li>
+          </ul>
+          </div>
+      
          </div>
-    
+       
     `
 
 
